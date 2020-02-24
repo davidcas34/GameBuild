@@ -17,12 +17,14 @@ public class EnemyAi : MonoBehaviour
     void Start()
     {
         agent = GetComponent<NavMeshAgent>();
-      // animationController = GetComponent<Animator>();
+        // animationController = GetComponent<Animator>();
+        agent.SetDestination(target.position);
     }
 
     // Update is called once per frame
     void Update()
     {
+        agent.SetDestination(target.position);
         distanceToTarget = Vector3.Distance(target.transform.position, transform.position);
         Debug.Log(distanceToTarget);
         if (distanceToTarget < chaseRange)
