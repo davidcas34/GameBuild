@@ -18,26 +18,23 @@ public class SwordScript : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if(Input.GetKeyDown(KeyCode.F))
+        if (Input.GetKey(KeyCode.F))
         {
-            if (!attacked)
-            {
-                sword.enabled = true;
-                sword.Play("Attack", 0, 0.50f);
-                attacked = true;
-                time = Time.time;
-            }
-            else
-            {
-                Debug.Log(Time.time);
-                Debug.Log(time);
-                if (Time.time - time > 0.1f)
-                {
-                    Debug.Log("Sub" + (Time.time - time).ToString());
-                    sword.enabled = false;
-                    attacked = false;
-                }
-            }
+            sword.SetBool("Attack", true);
         }
+        else
+            sword.SetBool("Attack", false);
+        if (Input.GetKey(KeyCode.G))
+        {
+            sword.SetBool("Block", true);
+        }
+        else
+            sword.SetBool("Block", false);
+        if (Input.GetKey(KeyCode.H))
+        {
+            sword.SetBool("Poke", true);
+        }
+        else
+            sword.SetBool("Poke", false);
     }
 }
