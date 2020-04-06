@@ -2,13 +2,22 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using UnityEngine.UI;
 
 public class Knight : MonoBehaviour
 {
+
+    public int maxHealth = 5;
+    public int currentHealth;
+
+    public health_display healthBar;
+
     CapsuleCollider cc;
     // Start is called before the first frame update
     void Start()
     {
+        healthBar.SetMaxHealth(maxHealth);
+        currentHealth = maxHealth;
         cc = gameObject.GetComponent<CapsuleCollider>();
     }
 
@@ -31,8 +40,23 @@ public class Knight : MonoBehaviour
 
         if (collision.gameObject.CompareTag("Enemy"))
         {
+            TakeDamage(1);
             int index = SceneManager.GetActiveScene().buildIndex;
-            SceneManager.LoadScene(index);
+             SceneManager.LoadScene(index);
         }
     }
+
+
+
+    void TakeDamage(int damage)
+    {
+        currentHealth -= damage;
+        healthBar.SetHealth(currentHealth);
+    }
+
+    void Death()
+    {
+
+    }
+
 }
