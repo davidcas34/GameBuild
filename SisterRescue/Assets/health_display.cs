@@ -9,7 +9,7 @@ public class health_display : MonoBehaviour
 
     public void SetMaxHealth(int health) // This code allows the slider to move with the health set by programmer
     {
-        slider.maxValue = health;
+        //slider.maxValue = health;
         slider.value = health;
     }
 

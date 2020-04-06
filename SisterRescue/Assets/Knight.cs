@@ -40,9 +40,13 @@ public class Knight : MonoBehaviour
 
         if (collision.gameObject.CompareTag("Enemy"))
         {
-            TakeDamage(1);
-            int index = SceneManager.GetActiveScene().buildIndex;
-             SceneManager.LoadScene(index);
+            if (currentHealth - 1 == 0)
+            {
+                int index = SceneManager.GetActiveScene().buildIndex;
+                SceneManager.LoadScene(index);
+            }
+            else
+                TakeDamage(1);
         }
     }
 
