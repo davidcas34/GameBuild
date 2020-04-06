@@ -57,10 +57,4 @@ public class Knight : MonoBehaviour
         currentHealth -= damage;
         healthBar.SetHealth(currentHealth);
     }
-
-    void Death()
-    {
-
-    }
-
 }

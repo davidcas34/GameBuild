@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 705507994}
-  m_IndirectSpecularColor: {r: 0.43667546, g: 0.48427135, b: 0.5645225, a: 1}
+  m_IndirectSpecularColor: {r: 0.4366757, g: 0.48427194, b: 0.5645252, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -1034,6 +1034,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1251980191}
   - component: {fileID: 1251980192}
+  - component: {fileID: 1251980193}
   m_Layer: 5
   m_Name: HealthBar
   m_TagString: Untagged
@@ -1112,6 +1113,19 @@ MonoBehaviour:
   m_OnValueChanged:
     m_PersistentCalls:
       m_Calls: []
+--- !u!114 &1251980193
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1251980190}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1fa18b163590e674ea1edf0f7ccc6221, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  slider: {fileID: 1251980192}
 --- !u!1 &1474401504
 GameObject:
   m_ObjectHideFlags: 0
@@ -1257,7 +1271,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   maxHealth: 5
   currentHealth: 5
-  healthBar: {fileID: 0}
+  healthBar: {fileID: 1251980193}
 --- !u!114 &1701857347
 MonoBehaviour:
   m_ObjectHideFlags: 0
