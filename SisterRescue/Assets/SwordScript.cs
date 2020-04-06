@@ -12,7 +12,7 @@ public class SwordScript : MonoBehaviour
     void Start()
     {
         sword = gameObject.GetComponent<Animator>();
-        
+
     }
 
     // Update is called once per frame
@@ -23,18 +23,17 @@ public class SwordScript : MonoBehaviour
             sword.SetBool("Attack", true);
         }
         else
-            sword.SetBool("Attack", false);
-        if (Input.GetKey(KeyCode.G))
         {
-            sword.SetBool("Block", true);
+            sword.SetBool("Attack", false);
         }
+        if (Input.GetKey(KeyCode.G))
+            sword.SetBool("Block", true);
         else
             sword.SetBool("Block", false);
         if (Input.GetKey(KeyCode.H))
-        {
             sword.SetBool("Poke", true);
-        }
         else
             sword.SetBool("Poke", false);
     }
+    
 }
