@@ -8,6 +8,10 @@ TagManager:
   - Hero
   - Goal
   - Enemy
+  - Sword
+  - EnemyWeapon
+  - Door
+  - Walls
   layers:
   - Default
   - TransparentFX
@@ -17,12 +21,12 @@ TagManager:
   - UI
   - 
   - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
+  - Hero
+  - Enemy
+  - EnemyWeapon
+  - Walls
+  - Doors
+  - Floors
   - 
   - 
   - 
